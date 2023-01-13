@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import gaur.himanshu.roomdatabaserelations.database.model.Dog
 import gaur.himanshu.roomdatabaserelations.database.model.Owner
+import gaur.himanshu.roomdatabaserelations.database.model.OwnerDog
 
 
 @Dao
@@ -22,6 +23,9 @@ interface ExampleDao {
 
     @Query("SELECT * FROM Dog")
     suspend fun getAllDog(): List<Dog>
+
+    @Query("SELECT * FROM Owner")
+    suspend fun getOwnerDogList():List<OwnerDog>
 
 
 }
