@@ -51,9 +51,6 @@ object OneToOneRelation {
             Owner(
                 ownerId = 5, name = "Owner 5"
             ),
-            Owner(
-                ownerId = 6, name = "Owner 6"
-            ),
         )
     }
 }
