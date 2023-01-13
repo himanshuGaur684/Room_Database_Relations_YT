@@ -1,6 +1,7 @@
 package gaur.himanshu.roomdatabaserelations.database.model
 
 import androidx.room.Embedded
+import androidx.room.Junction
 import androidx.room.Relation
 
 
@@ -9,8 +10,9 @@ data class OwnerDog(
     val owner:Owner,
     @Relation(
         parentColumn = "ownerId",
-        entityColumn = "dogOwnerId"
+        entityColumn = "dogId",
+        associateBy = Junction(OwnerDogRef::class)
     )
-    val dog:Dog
+    val dog:List<Dog>?=null
 )
 

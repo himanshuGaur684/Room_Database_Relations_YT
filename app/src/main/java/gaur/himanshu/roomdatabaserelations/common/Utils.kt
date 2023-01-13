@@ -2,6 +2,7 @@ package gaur.himanshu.roomdatabaserelations.common
 
 import gaur.himanshu.roomdatabaserelations.database.model.Dog
 import gaur.himanshu.roomdatabaserelations.database.model.Owner
+import gaur.himanshu.roomdatabaserelations.database.model.OwnerDogRef
 
 object OneToOneRelation {
     fun getDogList(): List<Dog> {
@@ -121,5 +122,26 @@ object OneToManyRelation {
 }
 
 object ManyToManyRelation {
+
+
+    fun getList():List<OwnerDogRef>{
+        return listOf(
+            OwnerDogRef(
+                1, 1
+            ),
+            OwnerDogRef(
+                2, 1
+            ),
+            OwnerDogRef(
+                1, 2
+            ),
+            OwnerDogRef(
+                2, 2
+            ),
+            OwnerDogRef(
+                3, 1
+            ),
+        )
+    }
 
 }

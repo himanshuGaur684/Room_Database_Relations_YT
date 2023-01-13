@@ -6,8 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import gaur.himanshu.roomdatabaserelations.database.model.Dog
 import gaur.himanshu.roomdatabaserelations.database.model.Owner
+import gaur.himanshu.roomdatabaserelations.database.model.OwnerDogRef
 
-@Database(entities = [Dog::class, Owner::class], version = 1, exportSchema = false)
+@Database(entities = [Dog::class, Owner::class,OwnerDogRef::class], version = 4, exportSchema = false)
 abstract class ExampleDatabase : RoomDatabase() {
 
     companion object {

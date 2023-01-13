@@ -48,7 +48,9 @@ fun MainScreen(viewModel: MainViewModel) {
                     .padding(12.dp), verticalArrangement = Arrangement.Center
             ) {
                 Text(text = "Owner: ${it.owner.name} - ${it.owner.ownerId}")
-                Text(text = "Dog: ${it.dog.name} - ${it.dog.dogId}")
+                it.dog?.forEach {
+                    Text(text = "Dog: ${it.name} - ${it.dogId}")
+                }
             }
         }
     }
